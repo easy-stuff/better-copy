@@ -46,12 +46,12 @@ def better_copy(action: t.Optional[str], source: str, destination: str) -> None:
 
     if action == "copy":
         click.echo(f"Copying from {source} to {destination}...")
-        # Use rsync to copy files with progress information
+        # copy command
         command = ["rsync", "-avh", "--progress", source, destination]
 
     elif action == "move":
         click.echo(f"Moving from {source} to {destination}...")
-        # Use rsync to move files with progress information
+        # paste command
         command = [
             "rsync",
             "-avh",
